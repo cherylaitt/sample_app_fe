@@ -33,6 +33,12 @@
           "enableGooglePay": true
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7d6a85d0-2790-4a7f-ba8a-cbe922f2140b"
+      }
+    },
+    "owner": "chery.laitt"
   }
 }

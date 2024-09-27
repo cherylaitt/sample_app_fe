@@ -86,14 +86,18 @@ function Home() {
       ephemeral_key: ephemeralKey,
       payment_intent: paymentIntent,
     } = data;
-    console.log(customer, ephemeralKey, paymentIntent);
 
     // stripe payment logic
     const { error } = await initPaymentSheet({
       merchantDisplayName: "Preface Technopreneur Ltd.",
-      customerId: customer?.id,
-      customerEphemeralKeySecret: ephemeralKey?.secret,
-      paymentIntentClientSecret: paymentIntent?.client_secret,
+      // customerId: customer?.id,
+      customerId: "cus_QvJwm8kwTgxnfB",
+      // customerEphemeralKeySecret: ephemeralKey?.secret,
+      customerEphemeralKeySecret:
+        "ek_test_YWNjdF8xSmxzQ0FCOUlRQk5XZ2pqLG55ZXd1U1VqVENranZQYnBNcnFDOXhHbm5OQ1JIM3E_001cT858q3",
+      // paymentIntentClientSecret: paymentIntent?.client_secret,
+      paymentIntentClientSecret:
+        "pi_3Q3TIPB9IQBNWgjj0w1OPteJ_secret_XUAPmdBDkvoNXE2iKob4CBKyt",
       returnURL: "preface-app://orderStatus?access_token=1234",
       allowsDelayedPaymentMethods: true,
       defaultBillingDetails: {},
